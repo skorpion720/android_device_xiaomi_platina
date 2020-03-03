@@ -23,9 +23,9 @@
 
 # inherit MI 8 Lite AOSP device config
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_platina.mk
+    $(LOCAL_DIR)/derp_platina.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_platina-eng \
-    aosp_platina-userdebug \
-    aosp_platina-user
+    derp_platina-eng \
+    derp_platina-userdebug \
+    derp_platina-user
