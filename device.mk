@@ -37,6 +37,11 @@ PRODUCT_COPY_FILES += \
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
 
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=428
+
+
 # Device properties
 $(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
 
