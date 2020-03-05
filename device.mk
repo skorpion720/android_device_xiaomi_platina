@@ -57,6 +57,15 @@ PRODUCT_COPY_FILES += \
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    qti-telephony-common
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -80,6 +89,11 @@ PRODUCT_COPY_FILES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
+	
+# Power
+PRODUCT_PACKAGES += \
+    android.hardware.power@1.2-service.sdm660-libperfmgr
+
 
 # Vibrator
 PRODUCT_PACKAGES += \
