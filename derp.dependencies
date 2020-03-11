@@ -19,9 +19,9 @@
   },
   {
     "remote":      "github",
-    "repository":  "sdm660-common/android_vendor_xiaomi_sdm660-common",
+    "repository":  "skorpion720/android_vendor_xiaomi_sdm660-common_platina",
     "target_path": "vendor/xiaomi/sdm660-common",
-    "branch":      "lineage-17.0"
+    "branch":      "derp"
   },
   {
     "remote":      "github",
