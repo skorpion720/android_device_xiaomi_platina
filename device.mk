@@ -31,16 +31,12 @@ DEVICE_PATH := device/xiaomi/platina
 PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
     $(DEVICE_PATH)/configs/audio/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml \
-	$(DEVICE_PATH)/configs/audio/mixer_paths_overlay_static.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_overlay_static.xml
+    $(DEVICE_PATH)/configs/audio/mixer_paths_overlay_static.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_overlay_static.xml
+
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2280
 TARGET_SCREEN_WIDTH := 1080
-
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=428
-
 
 # Device properties
 $(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
@@ -56,15 +52,6 @@ PRODUCT_COPY_FILES += \
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay
-
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext \
-    qti-telephony-common
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
-
 
 # Permissions
 PRODUCT_COPY_FILES += \
@@ -89,11 +76,6 @@ PRODUCT_COPY_FILES += \
 # Soong
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
-	
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service.sdm660-libperfmgr
-
 
 # Vibrator
 PRODUCT_PACKAGES += \
@@ -109,3 +91,7 @@ PRODUCT_DEVICE := platina
 PRODUCT_MODEL := Mi 8 Lite (AOSP)
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MANUFACTURER := Xiaomi
+
+# Wallpapers
+PRODUCT_PACKAGES += \
+    PixelLiveWallpaperPrebuilt

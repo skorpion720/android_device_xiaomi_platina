@@ -33,6 +33,8 @@ TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/wake_gesture"
 TARGET_KERNEL_SOURCE := kernel/xiaomi/platina
 TARGET_KERNEL_CONFIG := platina_defconfig
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-gnu-
+KERNEL_TOOLCHAIN := $(PWD)/compiler/bin
 
 # Manifest
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
@@ -46,5 +48,6 @@ VENDOR_SECURITY_PATCH := 2019-11-01
 # WLAN MAC
 WLAN_MAC_SYMLINK := true
 
-# Display
-TARGET_SCREEN_DENSITY := 392
+# Init
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_platina
+TARGET_RECOVERY_DEVICE_MODULES := //$(DEVICE_PATH):libinit_platina

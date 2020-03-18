@@ -100,6 +100,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # DPI
 PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sf.lcd_density=428
     vendor.display.lcd_density=428
 
 # Radio
